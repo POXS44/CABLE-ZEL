@@ -10,7 +10,7 @@ namespace DataAccess
 {
     public class CD_Conexion
     {
-        private SqlConnection Conexion = new SqlConnection("Server=POXS44;DataBase=CABLEZEL;Integrated Security=true");
+        private SqlConnection Conexion = new SqlConnection("Server=tcp:josuemorales.database.windows.net,1433;Initial Catalog=cablezel_victor;Persist Security Info=False;User ID=josueadmin;Password=0096AzureSQL;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         
         public SqlConnection AbrirConexion()
         {

@@ -18,7 +18,7 @@ namespace DataAccess
         public DataTable Mostrar() {
 
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select *from Contrato";
+            comando.CommandText = "select * from Contrato";
             leer = comando.ExecuteReader();
             tabla.Load(leer);
             conexion.CerrarConexion();
@@ -30,7 +30,7 @@ namespace DataAccess
 
       
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into Contrato values ('"+fecha_contrato+"','"+descripcion+"','"+estado+"'" +
+            comando.CommandText = "insert into Contrato values ('"+fecha_contrato.Year+"-"+fecha_contrato.Month+"-"+fecha_contrato.Day+"','"+descripcion+"','"+estado+"'" +
                 ","+cant_televisores+","+cod_barrio+","+tipo_contrato+",'"+num_cedula+"','"+usuario+"','"+entidad+"')";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
